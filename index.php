@@ -70,10 +70,7 @@
 	                        <input type="text" class="form-control" min="1" max="1096" onchange="isright(this);" placeholder="365" id="srokg">
 	                        <span>дней</span>
 	                     </div>
-	                  </li>
-
-	                  <li>
-	                     <div class="form-group">
+	                     <div id="btn-calc-wrapper" class="form-group">	                     		
 	                        <button type="submit" class="btn btn-default btn-default-calk">Рассчитать</button>
 	                     </div>
 	                  </li>

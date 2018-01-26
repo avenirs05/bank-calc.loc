@@ -18,6 +18,10 @@
 	font-family: 'robotothin';
 }
 
+#btn-calc-wrapper {
+	vertical-align: bottom;
+}
+
 @media screen and (max-device-width: 991px) {
 
 }
