@@ -9,10 +9,10 @@ window.onload = function () {
 		var daysInYear = 365;
 		
 		var periods = [
-			{ begin: 0, end: 30 },
-			{ begin: 31, end: 61 },
-			{ begin: 62, end: 91 },
-			{ begin: 92, end: 122 },
+			{ begin: 0,   end: 30 },
+			{ begin: 31,  end: 61 },
+			{ begin: 62,  end: 91 },
+			{ begin: 92,  end: 122 },
 			{ begin: 123, end: 152 },
 			{ begin: 153, end: 183 },
 			{ begin: 184, end: 213 },
@@ -378,28 +378,170 @@ window.onload = function () {
 
 	  // От 3 000 001 до 6 000 000 руб.
 	  if (amount >= sums[7].begin && amount <= sums[7].end) { 
-
+	  	if (term >= periods[0].begin  && term <= periods[0].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[1].begin  && term <= periods[1].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[2].begin  && term <= periods[2].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[3].begin  && term <= periods[3].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[4].begin  && term <= periods[4].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.1, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[5].begin  && term <= periods[5].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[6].begin  && term <= periods[6].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[7].begin  && term <= periods[7].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.95, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[8].begin  && term <= periods[8].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[9].begin  && term <= periods[9].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[10].begin && term <= periods[10].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[11].begin && term <= periods[11].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[12].begin && term <= periods[12].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[13].begin && term <= periods[13].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[14].begin && term <= periods[14].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}		
+	  	if (term >= periods[15].begin && term <= periods[15].end) { 
+	  		  finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear); 
+	  	}				
+	  	if (term >= periods[16].begin && term <= periods[16].end) { 
+	  		  finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear); 
+	  	}	
 	  }
 	  
 
 	  // От 6 000 001 до 10 000 000 руб.
 	  if (amount >= sums[8].begin && amount <= sums[8].end) { 
-
+	  	if (term >= periods[0].begin  && term <= periods[0].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[1].begin  && term <= periods[1].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[2].begin  && term <= periods[2].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[3].begin  && term <= periods[3].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[4].begin  && term <= periods[4].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4.1, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[5].begin  && term <= periods[5].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[6].begin  && term <= periods[6].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(4, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[7].begin  && term <= periods[7].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[8].begin  && term <= periods[8].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[9].begin  && term <= periods[9].end)  { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[10].begin && term <= periods[10].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.85, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[11].begin && term <= periods[11].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.85, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[12].begin && term <= periods[12].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.85, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[13].begin && term <= periods[13].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.85, amount, term, daysInYear);  
+	  	}
+	  	if (term >= periods[14].begin && term <= periods[14].end) { 
+	  			finalSum.innerHTML =  showFinalSumGuarantee(3.85, amount, term, daysInYear);  
+	  	}		
+	  	if (term >= periods[15].begin && term <= periods[15].end) { 
+	  		  finalSum.innerHTML =  showFinalSumGuarantee(3.85, amount, term, daysInYear); 
+	  	}				
+	  	if (term >= periods[16].begin && term <= periods[16].end) { 
+	  		  finalSum.innerHTML =  showFinalSumGuarantee(3.85, amount, term, daysInYear); 
+	  	}	
 	  }
 	  
 
 	  // Больше 10 000 000 руб.
-	  if (amount >= sums[9].begin) { }
-	
-
-
-
-
-
-
-
-
-
+	  if (amount >= sums[9].begin) {
+  		if (term >= periods[0].begin  && term <= periods[0].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[1].begin  && term <= periods[1].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[2].begin  && term <= periods[2].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(4.15, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[3].begin  && term <= periods[3].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(4.1, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[4].begin  && term <= periods[4].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(4.1, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[5].begin  && term <= periods[5].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(4, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[6].begin  && term <= periods[6].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(3.95, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[7].begin  && term <= periods[7].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(3.9, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[8].begin  && term <= periods[8].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(3.85, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[9].begin  && term <= periods[9].end)  { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(3.8, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[10].begin && term <= periods[10].end) { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(3.8, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[11].begin && term <= periods[11].end) { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(3.8, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[12].begin && term <= periods[12].end) { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(3.8, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[13].begin && term <= periods[13].end) { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(3.8, amount, term, daysInYear);  
+  		}
+  		if (term >= periods[14].begin && term <= periods[14].end) { 
+  				finalSum.innerHTML =  showFinalSumGuarantee(3.8, amount, term, daysInYear);  
+  		}		
+  		if (term >= periods[15].begin && term <= periods[15].end) { 
+  			  finalSum.innerHTML =  showFinalSumGuarantee(3.8, amount, term, daysInYear); 
+  		}				
+  		if (term >= periods[16].begin && term <= periods[16].end) { 
+  			  finalSum.innerHTML =  showFinalSumGuarantee(3.85, amount, term, daysInYear); 
+  		}	
+	  }
 
 	};
 
