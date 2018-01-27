@@ -1,27 +1,29 @@
-window.onload = function() {
+window.onload = function () {
 
-	var amount = document.getElementById('summag').value;
-	var term = document.getElementById('srokg').value;
-	var finalSum = document.getElementById('final-sum');
-	var sumInput = document.getElementById('summag');
-	var termInput = document.getElementById('srokg');
-	var daysInYear = 365;
-
-
-	sumInput.onkeyup = function() {
-		var amountEntered = document.getElementById('summag');
-		var separatedThouthandsAmount = separateThousands(amountEntered.value);
-		// console.log(separatedThouthandsAmount);
+  var sumInput = document.getElementById('summag');
+	
+	sumInput.onkeyup = function() {	  
+	   var amountEntered = document.getElementById('summag').value;
+	   var separatedThouthandsAmount = separateThousands(amountEntered);
+	   sumInput.value = separatedThouthandsAmount;
 	}
 
-	// Если фокус на сумме ввода или сроке, итог обнуляется
-	sumInput.onfocus = function()  { finalSum.innerHTML = '0 руб.'; };
-	termInput.onfocus = function() { finalSum.innerHTML = '0 руб.'; };
 
-  // Обработка кнопки "Рассчитать"
+	toZeroFinalSumIfFocus();
+
+
 	document.getElementById('btn-calc-guarantee').onclick = function(event) {		
-		event.preventDefault();			
+		event.preventDefault();
+		
+		// Сначала получили сумму в виде строки (т.к. до этого то, что ввел юзер, разбили на разряды)
+		var amount = document.getElementById('summag').value;
+		// Убираем группы разрядов и преобразовываем в число для расчетов
+		amount = unSeparateThousandsAndToNum(amount);
 
+		var term = document.getElementById('srokg').value;
+		var finalSum = document.getElementById('final-sum');
+		var daysInYear = 365;
+		
 		var periods = [
 			{ begin: 0,   end: 30 },
 			{ begin: 31,  end: 61 },
@@ -65,7 +67,7 @@ window.onload = function() {
 
 		// До 50 000 руб.
 		if ( (amount > sums[0].begin && amount <= sums[0].end) && 
-				 (amount != '' && term != '')                      &&
+				 (amount != '' && term != '') &&
 				 (amount != 0 && term != 0) ) 
 		{	
 

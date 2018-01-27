@@ -1,11 +1,29 @@
   
+  // Обнуляет итоговую сумму если юзер сделал фокус на сумме или сроке 
+  function toZeroFinalSumIfFocus() {
+    // Input поля ввода суммы юзером
+    var sumInput = document.getElementById('summag');
+
+    // Input поля ввода количества дней юзером
+    var termInput = document.getElementById('srokg');
+
+    // Если фокус на сумме ввода или сроке, итог обнуляется
+    sumInput.onfocus = function()  { 
+      document.getElementById('final-sum').innerHTML = '0 руб.'; 
+    } 
+    termInput.onfocus = function() { 
+      document.getElementById('final-sum').innerHTML = '0 руб.'; 
+    }
+  }
+
   // Разделяет группы разрядов числа
   function separateThousands (num) {
-      if (num == 3) {
+      num = String(num);
+      num = unSeparateThousands(num); 
+
+      if (num.length == 3) {
           return num;
       }
-      
-      num = String(num);
 
       switch(num.length) {
         case 4:
@@ -62,6 +80,29 @@
   function showFinalSumGuarantee (percent, amount, term, daysInYear) {
       var finalSum = Math.round( ( (percent / daysInYear) *  term) * amount / 100 );
       return separateThousands(finalSum) + ' ' + 'руб.';  	
+  }
+
+
+  // Убирает группы разрядов, оставляет строку
+  function unSeparateThousands (str) {
+      var res = '';
+      
+      for (var i = 0; i < str.length; i++) {
+            if (str[i] === ' ') {
+                  continue;
+            }
+            
+            res += str[i];
+      }
+      
+      return res;
+  }
+
+
+  // Убирает группы разрядов, оставляет возвращает число
+  function unSeparateThousandsAndToNum (str) {
+      str = str.replace(/\s+/g,'');     
+      return Number(str);
   }
 
 
