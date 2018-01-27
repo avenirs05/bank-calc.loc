@@ -61,6 +61,9 @@ window.onload = function () {
 			finalSum.innerHTML = '0 руб.'; 
 		}
 
+		if (term > periods[16].end) {
+			finalSum.innerHTML = 'Не верно указан срок';
+		}
 		
 
 		// До 50 000 руб.
@@ -90,7 +93,7 @@ window.onload = function () {
 				}				
 				if (term >= periods[16].begin && term <= periods[16].end) { 
 					  finalSum.innerHTML =  showFinalSumGuarantee(4.95, amount, term, daysInYear); 
-				}			
+				}
 		}
 
 

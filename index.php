@@ -33,7 +33,7 @@
 	                        <span>руб.</span>
 	                     </div>
 	                     <div class="form-group">
-	                        <label for="srokg">Срок гарантии</label>
+	                        <label for="srokg">Срок гарантии <i>(максимум 1096)</i></label>
 	                        <input id="srokg" type="text" class="form-control" min="1" max="1096" placeholder="365" id="srokg">
 	                        <span>дней</span>
 	                     </div>
@@ -46,11 +46,11 @@
 	                  </li>
 	               </ul>
 	               <ul class="calk-list-rezult">
-	                  <li><span class="text">Стоимость банковской гарантии
+	                  <li id="bg-will-cost"><span class="text">Стоимость банковской гарантии
 	                     для Вас составит: </span>
 	                  </li>
 	                  <li><span id="final-sum" class="summ">0 руб. </span><span></span></li>
-	                  <li>
+	                  <li id="bg-send-appl">
 	                    <a href="#contact_form_pop_2" class="zayavka-btn fancybox">Отправить заявку</a>
 	                  </li>
 	               </ul>
