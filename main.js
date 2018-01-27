@@ -8,6 +8,8 @@ window.onload = function () {
 		var finalSum = document.getElementById('final-sum');
 		var daysInYear = 365;
 		
+		console.log(typeof amount);
+
 		var periods = [
 			{ begin: 0,   end: 30 },
 			{ begin: 31,  end: 61 },
@@ -29,7 +31,7 @@ window.onload = function () {
 		];
 
 		var sums = [
-			{ end: 50000 },
+			{ begin: 0,       end: 50000 },
 			{ begin: 50001,   end: 100000   },
 			{ begin: 100001,  end: 150000   },
 			{ begin: 150001,  end: 400000   },
@@ -42,23 +44,34 @@ window.onload = function () {
 		];
 
 
+		// Если не заполнена сумма или срок или 0, то итоговая сумма 0
+		if (amount == '' || term == '' || amount == 0 || term == 0 ) { 
+			finalSum.innerHTML = '0 руб.'; 
+		}
+
+		
+
 		// До 50 000 руб.
-		if (amount <= sums[0].end) {	
-				if (term >= periods[0].begin  && term <= periods[0].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[1].begin  && term <= periods[1].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[2].begin  && term <= periods[2].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[3].begin  && term <= periods[3].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[4].begin  && term <= periods[4].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[5].begin  && term <= periods[5].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[6].begin  && term <= periods[6].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[7].begin  && term <= periods[7].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[8].begin  && term <= periods[8].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[9].begin  && term <= periods[9].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[10].begin && term <= periods[10].end) { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[11].begin && term <= periods[11].end) { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[12].begin && term <= periods[12].end) { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[13].begin && term <= periods[13].end) { finalSum.innerHTML = '2 500'; }
-				if (term >= periods[14].begin && term <= periods[14].end) { finalSum.innerHTML = '2 500'; }				
+		if ( (amount > sums[0].begin && amount <= sums[0].end) && 
+				 (amount != '' && term != '') &&
+				 (amount != 0 && term != 0) ) 
+		{	
+
+				if (term >= periods[0].begin  && term <= periods[0].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[1].begin  && term <= periods[1].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[2].begin  && term <= periods[2].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[3].begin  && term <= periods[3].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[4].begin  && term <= periods[4].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[5].begin  && term <= periods[5].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[6].begin  && term <= periods[6].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[7].begin  && term <= periods[7].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[8].begin  && term <= periods[8].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[9].begin  && term <= periods[9].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[10].begin && term <= periods[10].end) { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[11].begin && term <= periods[11].end) { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[12].begin && term <= periods[12].end) { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[13].begin && term <= periods[13].end) { finalSum.innerHTML = '2 500 руб.'; }
+				if (term >= periods[14].begin && term <= periods[14].end) { finalSum.innerHTML = '2 500 руб.'; }				
 				
 				if (term >= periods[15].begin && term <= periods[15].end) { 
 					  finalSum.innerHTML =  showFinalSumGuarantee(4.95, amount, term, daysInYear); 
@@ -71,21 +84,21 @@ window.onload = function () {
 
 		// От 50 001 до 100 000 руб.
 		if (amount >= sums[1].begin && amount <= sums[1].end) { 
-				if (term >= periods[0].begin  && term <= periods[0].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[1].begin  && term <= periods[1].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[2].begin  && term <= periods[2].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[3].begin  && term <= periods[3].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[4].begin  && term <= periods[4].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[5].begin  && term <= periods[5].end)  { finalSum.innerHTML = '2 000'; }
-				if (term >= periods[6].begin  && term <= periods[6].end)  { finalSum.innerHTML = '3 000'; }
-				if (term >= periods[7].begin  && term <= periods[7].end)  { finalSum.innerHTML = '3 000'; }
-				if (term >= periods[8].begin  && term <= periods[8].end)  { finalSum.innerHTML = '3 000'; }
-				if (term >= periods[9].begin  && term <= periods[9].end)  { finalSum.innerHTML = '3 000'; }
-				if (term >= periods[10].begin && term <= periods[10].end) { finalSum.innerHTML = '3 000'; }
-				if (term >= periods[11].begin && term <= periods[11].end) { finalSum.innerHTML = '3 000'; }
-				if (term >= periods[12].begin && term <= periods[12].end) { finalSum.innerHTML = '3 500'; }
-				if (term >= periods[13].begin && term <= periods[13].end) { finalSum.innerHTML = '3 500'; }
-				if (term >= periods[14].begin && term <= periods[14].end) { finalSum.innerHTML = '3 500'; }				
+				if (term >= periods[0].begin  && term <= periods[0].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[1].begin  && term <= periods[1].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[2].begin  && term <= periods[2].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[3].begin  && term <= periods[3].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[4].begin  && term <= periods[4].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[5].begin  && term <= periods[5].end)  { finalSum.innerHTML = '2 000 руб.'; }
+				if (term >= periods[6].begin  && term <= periods[6].end)  { finalSum.innerHTML = '3 000 руб.'; }
+				if (term >= periods[7].begin  && term <= periods[7].end)  { finalSum.innerHTML = '3 000 руб.'; }
+				if (term >= periods[8].begin  && term <= periods[8].end)  { finalSum.innerHTML = '3 000 руб.'; }
+				if (term >= periods[9].begin  && term <= periods[9].end)  { finalSum.innerHTML = '3 000 руб.'; }
+				if (term >= periods[10].begin && term <= periods[10].end) { finalSum.innerHTML = '3 000 руб.'; }
+				if (term >= periods[11].begin && term <= periods[11].end) { finalSum.innerHTML = '3 000 руб.'; }
+				if (term >= periods[12].begin && term <= periods[12].end) { finalSum.innerHTML = '3 500 руб.'; }
+				if (term >= periods[13].begin && term <= periods[13].end) { finalSum.innerHTML = '3 500 руб.'; }
+				if (term >= periods[14].begin && term <= periods[14].end) { finalSum.innerHTML = '3 500 руб.'; }				
 				
 				if (term >= periods[15].begin && term <= periods[15].end) { 
 					  finalSum.innerHTML =  showFinalSumGuarantee(4.95, amount, term, daysInYear); 

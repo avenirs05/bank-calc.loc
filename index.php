@@ -29,12 +29,12 @@
 	                  <li>
 	                     <div class="form-group">
 	                        <label for="summag">Сумма гарантии</label>
-	                        <input id="summag" type="text" class="form-control" min="1" max="15000000" onchange="isright(this);" placeholder="1 000 000" id="summag">
+	                        <input id="summag" type="text" class="form-control" min="1" max="99000000000"  placeholder="1 000 000" id="summag">
 	                        <span>руб.</span>
 	                     </div>
 	                     <div class="form-group">
 	                        <label for="srokg">Срок гарантии</label>
-	                        <input id="srokg" type="text" class="form-control" min="1" max="1096" onchange="isright(this);" placeholder="365" id="srokg">
+	                        <input id="srokg" type="text" class="form-control" min="1" max="1096" placeholder="365" id="srokg">
 	                        <span>дней</span>
 	                     </div>
 	                     <div id="btn-calc-wrapper" class="form-group">	                     		
