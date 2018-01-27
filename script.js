@@ -1,4 +1,16 @@
   
+  // Разделяет группы разрядов числа во время ввода юзером цифр в поле сумма
+  function toThousandsWhenInput () {
+      var sumInput = document.getElementById('summag');
+      
+      sumInput.onkeyup = function() {   
+         var amountEntered = document.getElementById('summag').value;
+         var separatedThouthandsAmount = separateThousands(amountEntered);
+         sumInput.value = separatedThouthandsAmount;
+      }
+  }
+
+
   // Обнуляет итоговую сумму если юзер сделал фокус на сумме или сроке 
   function toZeroFinalSumIfFocus() {
     // Input поля ввода суммы юзером
@@ -83,7 +95,7 @@
   }
 
 
-  // Убирает группы разрядов, оставляет строку
+  // Убирает группы разрядов, оставляет (возвращает) строку
   function unSeparateThousands (str) {
       var res = '';
       

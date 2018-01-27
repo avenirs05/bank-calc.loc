@@ -1,15 +1,8 @@
 window.onload = function () {
 
-  var sumInput = document.getElementById('summag');
-	
-	sumInput.onkeyup = function() {	  
-	   var amountEntered = document.getElementById('summag').value;
-	   var separatedThouthandsAmount = separateThousands(amountEntered);
-	   sumInput.value = separatedThouthandsAmount;
-	}
-
-
 	toZeroFinalSumIfFocus();
+
+	toThousandsWhenInput();	
 
 
 	document.getElementById('btn-calc-guarantee').onclick = function(event) {		
@@ -17,6 +10,7 @@ window.onload = function () {
 		
 		// Сначала получили сумму в виде строки (т.к. до этого то, что ввел юзер, разбили на разряды)
 		var amount = document.getElementById('summag').value;
+		
 		// Убираем группы разрядов и преобразовываем в число для расчетов
 		amount = unSeparateThousandsAndToNum(amount);
 
