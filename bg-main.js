@@ -1,10 +1,14 @@
 window.onload = function () {
 
+	// Обнуляем итоговую сумму если юзер сделал фокус на сумме или сроке 
 	toZeroFinalSumIfFocus();
 
+	
+	// Разделяем группы разрядов числа во время ввода юзером цифр в поле сумма
 	toThousandsWhenInput();	
 
-
+	
+	// Подсчет итоговой суммы
 	document.getElementById('btn-calc-guarantee').onclick = function(event) {		
 		event.preventDefault();
 		

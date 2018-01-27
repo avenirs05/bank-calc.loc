@@ -60,8 +60,8 @@
 	   </div>
 	</section>
 
-	<script src="script.js"></script>
-	<script src="main.js"></script>
+	<script src="bg-main.js"></script>
+	<script src="bg-func.js"></script>
 	
 	</body>
 	
