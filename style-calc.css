@@ -14,7 +14,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 
-.calk h2 {
+#rasschet .calk h2 {
 	font-family: 'robotothin';
 }
 
@@ -23,14 +23,14 @@
 }
 
 #summag {
-    width: 230px;
+    width: 240px;
 }
 
 #term-text-max {
     position: absolute;
 }
 
-.form-group i {
+#rasschet .form-group i {
     font-size: 11px;
 }
 
@@ -38,16 +38,81 @@
     margin-right: 30px;
 }
 
-#bg-send-appl {
-    margin-left: 30px;
+#will-cost-wrap .text {
+    font-family: "robotothin";
+    font-size: 22px;
+    color: rgb(255, 255, 255);
 }
 
-/*#srokg {
-    width: 130px;
-}*/
+#will-cost-wrap .text,
+#will-cost-wrap #final-sum {
+    font-family: "robotothin";
+    font-size: 26px;
+    color: rgb(255, 255, 255);
+}
+
+#final-sum {
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.calk-list-rezult li .zayavka-btn {
+    padding-left: 0;
+}
+
+#will-cost-wrap {
+    margin-bottom: 50px;
+}
+
+#rasschet .zayavka-btn {
+    border: 1px dotted rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+#btn-calc-guarantee {
+    width: 195px;
+}
+
+.calk-list li .form-group span {
+    top: 46px;
+}
 
 @media screen and (max-device-width: 991px) {
+    #rasschet #summag,
+    #rasschet #srokg {
+        margin-right: 0;
+    }
 
+    #rasschet #srokg {
+        width: 240px;
+    }
+
+    #summag-wrap {
+        margin-bottom: 40px;
+    }
+
+    .calk-list li .form-group span {
+        right: 10px;
+    }
+
+    #will-cost-wrap {
+        text-align: center;
+        line-height: 170%;
+    }
+
+    .calk h2 {
+        font-size: 24px;
+        line-height: 120%;
+    }
+    .calk-list li {
+        margin-bottom: 10px;
+    }
+
+    #final-sum {
+        line-height: 140%;
+    }
 }
 
 @media screen and (min-device-width: 320px) {
