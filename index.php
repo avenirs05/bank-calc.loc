@@ -7,7 +7,9 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <!-- Bootstrap Эти стили удалить, они есть уже! -->
+    <!-- Bootstrap Эти стили удалить только из этого файла, они есть уже! 
+		На вашем сайте их оставить обязательно!
+    -->
     <link href="https://banksp.ru/wp-content/themes/prf/css/bootstrap.min.css" rel="stylesheet">
  		<link href="https://banksp.ru/wp-content/themes/prf/css/bootstrap-select.min.css" rel="stylesheet">		
     <link href="https://banksp.ru/wp-content/themes/prf/style.css" rel="stylesheet">

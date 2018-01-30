@@ -1,0 +1,53 @@
+Инструкция по подключению файлов калькулятора банковской гарантии
+----------------------------------------------
+http://test.pretenzor.ru/
+
+
+Просьба не заменять, не удалять, не менять старые стили css на вашем хостинге, а также не заменять, не удалять, не менять, что относится к плагину, отвечающему за попАп "Отправить заявку". "Отправить заявку" - в задании Аделина писала, что не трогать, я в итоге ее трогать не стал. На тестовом сайте она не работает, у вас должно заработать.
+
+Основные подключения файлов, кусков кода
+----------------------------------
+	- Полностью заменить на вашем сайте section с id="rasschet" на мой из файла index.php
+	
+	- Файл style-calc.css обязательно подключить ПОСЛЕ старых стилей, я старые стили переопределял. 
+	
+	- Подключить мои js-скрипты из файла index.php в таком порядке:
+	<script src="bg-main.js"></script>
+	<script src="bg-func.js"></script>
+	
+
+Удаления файлов, кусков кода
+-----------------------------	
+Можно удалить из МОИХ файлов (должно работать без них). Именно из тех файлов что я прислал, на вашем же хостинге не удалять:
+
+	Файл index.php
+	----------------------
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	
+    <link href="https://banksp.ru/wp-content/themes/prf/css/bootstrap.min.css" rel="stylesheet">
+ 	<link href="https://banksp.ru/wp-content/themes/prf/css/bootstrap-select.min.css" rel="stylesheet">		
+    <link href="https://banksp.ru/wp-content/themes/prf/style.css" rel="stylesheet">
+    <link href="https://banksp.ru/wp-content/themes/prf/responsive.css" rel="stylesheet">	
+	
+	
+	Папка fonts удалить
+	--------------
+	
+	Папка css удалить
+	--------------------
+	
+	В файле style-calc.css 
+	-----------------------
+	удалить кусок кода ниже (строки 1-11): 
+	
+	@font-face {
+		font-family: 'robotothin';
+		src: url('fonts/roboto-thin-webfont.eot');
+		src: url('fonts/roboto-thin-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/roboto-thin-webfont.woff2') format('woff2'),
+			 url('fonts/roboto-thin-webfont.woff') format('woff'),
+			 url('fonts/roboto-thin-webfont.ttf') format('truetype'),
+			 url('fonts/roboto-thin-webfont.svg#robotothin') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
