@@ -51,7 +51,7 @@
 	               </ul>
 								 <div id="will-cost-wrap">
 									 	<span class="text">Стоимость банковской гарантии составит: </span><br class="visible-xs-block">
-									 	<strong><span id="final-sum" class="summ">0 руб. </span></>
+									 	<strong><span id="final-sum" class="summ">0 руб. </span></strong>
 								 </div>
 	               <ul class="calk-list-rezult">
 	                  <li id="bg-send-appl">
